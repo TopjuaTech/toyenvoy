@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Apple+Garamond');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  background-color: white;
+}
+
+p, h1, h2, h3, a {
+  color: black;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+
+.row {
+  width: 100%;
+}
+
+.image-row {
+  position: relative;
+  height: 85vh;
+}
+
+.image-caption {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 3.5rem;
+  top: 50%;
+  bottom: 50%;
+}
+
+@media (min-width: 850px) {
+  body {
+    overflow: hidden;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .image-row {
+    width: 50%;
+  }
+}
+
+.caption {
+  color: #fff;
+  font-size: 3rem;
+  font-family: "Montserrat";
+  transition-property: transform;
+  border-width: 2px;
+  padding: 0.5rem 4rem;
+  transition-duration: 300ms;
+  line-height: 2.2rem;
+}
+
+.caption:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1350px) {
+  .caption {
+    font-size: 3.5rem;
+    line-height: 3rem;
+    padding: 1rem 7rem;
+    height: 5.5rem;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+.font-garamond {
+  font-family: 'garamond', serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat';
+}
+
+.h-96 {
+  height: 96vh;
+}
+
+.w-96 {
+  width: 96vw;
+}
+
+.nav-header {
+  min-height: 94px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-header > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.nav-header > ul > li {
+  margin: 7px;
+}
+
+@media (min-width: 768px) {
+  .nav-header {
+    justify-content: flex-start;
+  }
+
+  .nav-main {
+    display: flex;
+    transition: 300ms;
+  }
+
+  .active {
+    border-color: black !important;
+  }
+
+  .nav-main > ul > li > a {
+    border: solid 2px;
+    border-color: white;
+    border-bottom: 0px;
+    transition: 300ms;
+  }
+
+  .nav-main > ul > li > a:hover {
+    border: solid 2px;
+    border-color: black;
+    border-bottom: 0px;
+    transition: 300ms;
+  }
+
+  .active {
+    border-color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-main {
+    display: none;
+  }
+
+  .active {
+    border-bottom: solid 2px;
+  }
+}
+
+.nav-main {
+  width: 100%;
+}
+
+.nav-main > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-main > ul > li {
+  font-size: 2.5rem;
+  font-family: "sans serif";
+}
+
+.nav-main > ul > li > a {
+  padding: 1px 12px;
+}
+
+.button-interested {
+  color: white;
+  background-color: black;
+  padding: 4px 20px; 
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  max-width: 16rem;
+}
+
+.button-interested:hover {
+  background-color: #2d3748;
+}
+
+.button-interested:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #e2e8f0;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  .button-interested {
+    background-color: #2d3748;
+    border-color: #4a5568;
+  }
+
+  .button-interested:hover {
+    background-color: #4a5568;
+  }
+
+  .button-interested:focus {
+    box-shadow: 0 0 0 4px #4a5568;
+  }
+} */
+
+.max-w-40-screen {
+  max-width: 40vw;
+}
+
+.max-w-half-screen {
+  max-width: 50vw;
+}
+
+.min-w-400 {
+  min-width: 400px;
+}
+
+.button-send {
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.caption-interested {
+  max-width: 350px;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .content {
+    max-width: 40vw;
+  }
+  .slider {
+    max-width: 40vw;
+    height: 41vh;
+  }
+}
+
+.previous {
+  position: absolute;
+  height: 100%;
+  width: 7%;
+  background-color: #7d7f82;
+  opacity: 0.7;
+}
+
+.next {
+  position: absolute;
+  height: 100%;
+  width: 7%;
+  right: 0%;
+  background-color: #7d7f82;
+  opacity: 0.7;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.max-h-half-screen {
+  max-height: 50vh;
+}
+
+.grabbable {
+  cursor: grab;
+}
+
+.grabbable:active {
+  cursor: grabbing;
+}
+
+.card {
+  cursor: pointer;
+  border: solid 1px;
+  padding: 10px;
+  transition: 300ms;
+  border-color: black;
+}
+
+.card:hover {
+  background-color: #c5c5c5;
+  opacity: 0.7;
+  transition: 300ms;
+}
