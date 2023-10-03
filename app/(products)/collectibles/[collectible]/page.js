@@ -3,7 +3,6 @@
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useKeenSlider } from 'keen-slider/react'
-import SecondaryNavbar from '@/components/SecondaryNavbar'
 import 'keen-slider/keen-slider.min.css'
 
 export default function Home() {
@@ -17,7 +16,6 @@ export default function Home() {
 
   return (
     <div className='max-h-screen min-h-screen flex flex-col'>
-      <SecondaryNavbar />
       <section className='md:flex-row flex-col my-4 mx-9 flex justify-center gap-4 md:max-h-half-screen'>
         <div ref={sliderRef} className='keen-slider slider'>
           <div className='keen-slider__slide'>

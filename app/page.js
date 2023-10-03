@@ -5,12 +5,12 @@ import Navbar from '@/components/Navbar'
 export default function Home() {
   return (
     <div className='max-h-screen min-h-screen flex flex-col'>
-      <Navbar />
+      
       <div className='row'>
         <div className='image-row'>
           <Image
             sizes='(max-width: 1200px) 100vw, 1200px'
-            srcset='
+            srcSet='
             /vintage-car-300.jpg 300w,
             /vintage-car-903.jpg 903w,
             /vintage-car-1200.jpg 1200w'

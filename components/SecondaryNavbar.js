@@ -9,38 +9,27 @@ export default function SecondaryNavbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className='flex flex-col justify-center items-center'>
-      <nav className='nav-header'>
-        <Link href='/'>
-          <Image
-            src='/logo.png'
-            alt='Toy Envoy Logo'
-            width={100}
-            height={24}
-            priority
-          />
-        </Link>
-      </nav>
+    <div className='flex flex-col justify-center items-center'>     
       <nav className='nav-main'>
         <ul>
           <li>
             <Link href='/collectibles/brandx' className='active'>
-              brand x
+              car toys
             </Link>
           </li>
           <li>
             <Link href='/collectibles/brandx'>
-              brand y
+              fashion
             </Link>
           </li>
           <li>
             <Link href='/collectibles/brandx'>
-              brand z
+              watches
             </Link>
           </li>
           <li>
             <Link href='/collectibles/brandx'>
-              brand a
+              car accessories
             </Link>
           </li>
         </ul>

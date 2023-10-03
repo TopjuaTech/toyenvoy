@@ -3,7 +3,6 @@
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { useKeenSlider } from 'keen-slider/react'
-import SecondaryNavbar from '@/components/SecondaryNavbar'
 import 'keen-slider/keen-slider.min.css'
 
 export default function Home() {
@@ -17,14 +16,13 @@ export default function Home() {
 
   return (
     <div className='max-h-screen min-h-screen flex flex-col'>
-      <SecondaryNavbar />
       <section className='md:flex-row flex-col my-4 mx-9 flex justify-center gap-4 md:max-h-half-screen'>
         <div ref={sliderRef} className='keen-slider slider'>
           <div className='keen-slider__slide'>
             <div>
               <Image
                 sizes='(max-width: 987px) 100vw, 500px'
-                srcset='
+                srcSet='
                 /vintage-item1-300.jpg 300w,
                 /vintage-item1-765.jpg 765w,
                 /vintage-item1-987.jpg 987w'
@@ -39,7 +37,7 @@ export default function Home() {
             <div>
               <Image
                 sizes='(max-width: 987px) 100vw, 500px'
-                srcset='
+                srcSet='
                 /vintage-item1-300.jpg 300w,
                 /vintage-item1-765.jpg 765w,
                 /vintage-item1-987.jpg 987w'
@@ -54,7 +52,7 @@ export default function Home() {
             <div>
               <Image
                 sizes='(max-width: 987px) 100vw, 500px'
-                srcset='
+                srcSet='
                 /vintage-item1-300.jpg 300w,
                 /vintage-item1-765.jpg 765w,
                 /vintage-item1-987.jpg 987w'
@@ -96,7 +94,7 @@ export default function Home() {
       <div className='md:flex justify-evenly gap-4 hidden'>
         <Image
           sizes='(max-width: 987px) 100vw, 400px'
-          srcset='
+          srcSet='
           /vintage-item1-300.jpg 300w,
           /vintage-item1-765.jpg 765w,
           /vintage-item1-987.jpg 987w'
@@ -108,7 +106,7 @@ export default function Home() {
           alt='Vintage Car' />
         <Image
           sizes='(max-width: 987px) 100vw, 400px'
-          srcset='
+          srcSet='
           /vintage-item1-300.jpg 300w,
           /vintage-item1-765.jpg 765w,
           /vintage-item1-987.jpg 987w'
@@ -120,7 +118,7 @@ export default function Home() {
           alt='Vintage Car' />
         <Image
           sizes='(max-width: 987px) 100vw, 400px'
-          srcset='
+          srcSet='
           /vintage-item1-300.jpg 300w,
           /vintage-item1-765.jpg 765w,
           /vintage-item1-987.jpg 987w'
