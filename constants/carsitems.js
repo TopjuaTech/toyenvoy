@@ -6,10 +6,12 @@ export const carstab = [
   {
     route: '/cars/fashion',
     label: 'Fashion'
-  },{
+  },
+  {
     route: '/cars/watches',
     label: 'Watches'
-  },{
+  },
+  {
     route: '/cars/accessories',
     label: 'Accessories'
   }
