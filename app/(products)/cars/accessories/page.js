@@ -3,15 +3,33 @@
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import 'keen-slider/keen-slider.min.css'
-import {toyitems} from '@/constants/carsitems'
 
-export default function Home() {
+const Page = () => {
   const router = useRouter()
 
-  return (
+  const cars = [
+    {
+      id: 1,
+      name: 'car1',
+    },
+    {
+      id: 2,
+      name: 'car2',
+    },
+    {
+      id: 3,
+      name: 'car3',
+    },
+    {
+      id: 4,
+      name: 'car4',
+    },
+  ]
+  return(
+    <>
     <div className="max-h-screen min-h-screen flex flex-col">
       <section className="md:flex-row flex-col my-4 mx-9 flex justify-center gap-4 md:max-h-half-screen">
-        {toyitems.map(items => (
+        {cars.map(items => (
           <div onClick={() => router.push(`/cars/${items.name}`)} className="card" key={items.id}>
             <Image
               sizes="(max-width: 987px) 100vw, 500px"
@@ -35,5 +53,8 @@ export default function Home() {
         ))}
       </section>
     </div>
+    </>
   )
 }
+
+export default Page

@@ -5,33 +5,20 @@ import { Transition } from '@headlessui/react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function SecondaryNavbar() {
+export default function SecondaryNavbar({tabs}) {
+
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div className='flex flex-col justify-center items-center'>     
       <nav className='nav-main'>
         <ul>
-          <li>
-            <Link href='/collectibles/brandx' className='active'>
-              car toys
+          {tabs.map((items, idx) => (
+          <li key={idx}>
+            <Link href={items.route} className='active'>
+              {items.label}
             </Link>
-          </li>
-          <li>
-            <Link href='/collectibles/brandx'>
-              fashion
-            </Link>
-          </li>
-          <li>
-            <Link href='/collectibles/brandx'>
-              watches
-            </Link>
-          </li>
-          <li>
-            <Link href='/collectibles/brandx'>
-              car accessories
-            </Link>
-          </li>
+          </li>))}
         </ul>
       </nav>
       <button className='md:hidden' onClick={() => setIsOpen(!isOpen)}>
