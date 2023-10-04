@@ -9,6 +9,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "object-curly-spacing": ["error", "always"],
     "semi": ["error", "never"],
     "quotes": ["error", "single"],
     "linebreak-style": "off",
